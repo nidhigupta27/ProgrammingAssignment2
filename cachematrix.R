@@ -1,9 +1,11 @@
+
 ## The functions makeCacheMatrix and cacheSolve are used to compute the inverse of an intervible
 ## matrix and save the result in cache for all future inverse computations over the same 
 ## matrix
 
-# makeCacheMatrix returns a list of object methods(set,get,setinverse,getinverse).
-# it takes a square matrix as an which needs to be inversed by the cacheSolve function
+## makeCacheMatrix returns a list of object methods(set,get,setinverse,getinverse).
+## it takes input a square matrix that needs to be inversed by the cacheSolve function
+
 makeCacheMatrix <- function(my_matrix=matrix()){
   i <- NULL
   set<-function(new_matrix){
@@ -30,4 +32,6 @@ cacheSolve <- function(matrix_to_be_inversed){
   i<-solve(data)
   matrix_to_be_inversed$setinverse(i)
   i
+
 }
+
